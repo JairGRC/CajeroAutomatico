@@ -35,12 +35,8 @@ class cuentaBancaria{
 
     }
 }
-
-
 // instancia
 const acceso = new cuentaBancaria();
-
-
 
 function validarcuenta(cuentas,usuario,contra){
     for(var i=0;i<cuentas.length;i++){
