@@ -5,7 +5,10 @@ var cuentas = [
 ];
 
 
-function validarcuenta(cuentas,usuario,contra){
+function validarcuenta()
+{
+    let contra = document.getElementById('password').value;
+    let usuario = document.getElementById('user').value;
     for(var i=0;i<cuentas.length;i++){
         if(cuentas[i].nombre==usuario&&cuentas[i].password==contra)
         {
