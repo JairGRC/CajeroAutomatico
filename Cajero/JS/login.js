@@ -49,6 +49,7 @@ function validarcuenta() {
             acceso.password = contra;
             console.log(acceso)
             window.location.assign("index.html")
+        
             return alert("Ingreso")
         }
     }
