@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/login.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="side">
+        <img src="./IMG/woman-2.png" alt="">
+    </section>
+
+    <section class="main">
+        <div class="login-container">
+            <p class="title">Ingresa tus datos</p>
+            <div class="separator"></div>
+            <p class="welcome-message">Por favor, no comparta su clave por la seguridad de su cuenta bancaria.</p>
+
+            <form class="login-form">
+                <div class="form-control">
+                    <input type="text" name="user" id="user" placeholder="Usuario" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-control">
+                    <input type="password" name="password" id="password" placeholder="Clave" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <!-- <input type="button" value="Login" id="submit" onclick="validate()"/> -->
+                <button type="submit" class="submit" id="submit" value="Ingresar" onclick="validarcuenta()">Ingreso</button>
+                <!-- <div class="submit">
+                    <input type="button" value="Ingresar" id="submit" onclick="validate()"/>
+                </div> -->
+            </form>
+        </div>
+    </section>
+
+    <script src="./JS/login.js"></script>
+
+</body>
+</html>
