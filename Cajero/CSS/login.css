@@ -1,3 +1,8 @@
+:root {
+    --verde: #03a64ada;
+    --gris: #303433;
+}
+
 *{
     margin: 0;
     padding: 0;
