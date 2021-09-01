@@ -76,6 +76,7 @@
     <div id="bienvenida" style="display: none">
       <div class="window__green">
         <div class="main__container">
+          <br>
           <div class="main__container--title">
             <h1 id="title">
               Bienvenido/a, <br /><span id="nombreUsuario"></span>
@@ -86,18 +87,18 @@
           </div>
           <div class="main__container--options-buttons">
             <div class="options__buttons-deposito buttons">
-              <button type="button" class="button" onclick="ingresarMonto()">
+              <button type="button" class="buttonIngresar" onclick="ingresarMonto()">
                 Ingresar Monto
               </button>
             </div>
             <div class="options__buttons-retiro buttons">
-              <button type="button" class="button" onclick="retirarMonto()">
+              <button type="button" class="buttonRetirar" onclick="retirarMonto()">
                 Retirar Monto
               </button>
             </div>
-          </div>
-          <button type="button" class="button" onclick="Salir()">Salir</button>
-        </div>
+            </div class="options__buttons-salir">
+            <button type="button" class="buttonSalir" onclick="Salir()">Salir</button>
+            </div>
       </div>
     </div>
 
@@ -131,6 +132,7 @@
     <div id="ingresarMonto" style="display: none">
       <div class="window__white">
         <div class="main__container">
+          <br><br><br>
           <div class="main__container--title">
             <h1 id="title">Por favor, ingresa un<br />monto a ingresar</h1>
           </div>
@@ -141,21 +143,21 @@
               id="input-number_ingresar"
               min="10"
               max="2000"
-              placeholder="S/0.00"
+              placeholder="$0.00"
             />
           </div>
           <div class="main__container--options-buttons-row">
             <div class="options__buttons-retiro buttons aceptar">
               <button
                 type="button"
-                class="button"
+                class="buttonAceptar"
                 onclick="operacion_ingresarMonto()"
               >
                 Aceptar
               </button>
             </div>
             <div class="options__buttons-retiro buttons cancelar">
-              <button type="button" class="button" onclick="Cancelar()">
+              <button type="button" class="buttonCancelar" onclick="Cancelar()">
                 Cancelar
               </button>
             </div>
@@ -184,6 +186,7 @@
     <div id="retirarMonto" style="display: none">
       <div class="window__white">
         <div class="main__container">
+          <br><br><br>
           <div class="main__container--title">
             <h1 id="title">Por favor, ingresa un<br />monto a retirar</h1>
           </div>
@@ -194,21 +197,21 @@
               id="input-number_retirar"
               min="10"
               max="2000"
-              placeholder="S/0.00"
+              placeholder="$0.00"
             />
           </div>
           <div class="main__container--options-buttons">
             <div class="options__buttons-retiro buttons aceptar">
               <button
                 type="button"
-                class="button"
+                class="buttonAceptar"
                 onclick="operacion_retirarMonto()"
               >
                 Aceptar
               </button>
             </div>
             <div class="options__buttons-retiro buttons cancelar">
-              <button type="button" class="button" onclick="Cancelar()">
+              <button type="button" class="buttonCancelar" onclick="Cancelar()">
                 Cancelar
               </button>
             </div>
