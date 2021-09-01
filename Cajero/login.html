@@ -11,11 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="side">
+    <section class="side" id='woman'>
         <img src="./IMG/woman-2.png" alt="">
     </section>
 
-    <section class="main">
+    <section class="main" id='login'>
         <div class="login-container">
             <p class="title">Ingresa tus datos</p>
             <div class="separator"></div>
@@ -38,6 +38,33 @@
             </form>
         </div>
     </section>
+
+    <div id='bienvenida' style="display: none;">
+        <div class="window__green">
+            <div class="main__container">
+              <div class="main__container--title">
+                <h1 id="title">Bienvenido/a, <br><span id='nombreUsuario'></span></h1>
+              </div>
+              <div class="main__container--option-text">
+                <p>Por favor, seleccione qué operación desea realizar</p>
+              </div>
+              <div class="main__container--options-buttons">
+                <div class="options__buttons-balance buttons">
+                  <button type="button" class="button" onclick="mostrarclase()">Consultar Saldo</button>
+                </div>
+                <div class="options__buttons-deposito buttons">
+                  <button type="button" class="button">Ingresar Monto</button>
+                </div>
+                <div class="options__buttons-retiro buttons">
+                  <button type="button" class="button">Retirar Monto</button>
+                </div>
+              </div>
+              <button type="button" class="button" onclick="Salir()">Salir</button>
+            </div>
+          </div>
+    </div>
+
+
     <script src="./JS/login.js"></script>
 
 </body>

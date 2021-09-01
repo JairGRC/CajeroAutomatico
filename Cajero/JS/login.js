@@ -48,8 +48,14 @@ function validarcuenta() {
             acceso.saldo = cuentas[i].saldo;
             acceso.password = contra;
             console.log(acceso)
-            window.location.assign("index.html")
-        
+            //window.location.assign("index.html")
+            document.getElementById('woman').style.display ='none'; 
+            document.getElementById('login').style.display ='none'; 
+
+            document.getElementById('bienvenida').style.display ='block';
+
+            document.getElementById('nombreUsuario').innerHTML=acceso.nombre;
+            return true;
             return alert("Ingreso")
         }
     }
@@ -58,6 +64,9 @@ function validarcuenta() {
 
 function mostrarclase() {
     console.log(acceso)
+}
+function Salir() {
+    window.location.assign("login.html")
 }
 
 /*    function validarcuenta(cuentas,usuario,contra){
