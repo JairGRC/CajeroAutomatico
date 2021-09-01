@@ -88,12 +88,16 @@ function operacion_retirarMonto(){
     document.getElementById('confirma_retiro').innerHTML=acceso.retirarSaldo(Number(monto_retirar));
     document.getElementById('retirarMonto').style.display ='none';
     document.getElementById('confirmacion_retirarMonto').style.display ='block';
+    document.getElementById('ingresarMonto').style.display ='none';
+    document.getElementById('confirmacion_ingresoMonto').style.display ='none';
 }
 function operacion_ingresarMonto(){
     let monto_ingresar = document.getElementById('input-number_ingresar').value;
     document.getElementById('confirma_ingreso').innerHTML=acceso.ingresarSaldo(Number(monto_ingresar));
     document.getElementById('ingresarMonto').style.display ='none';
     document.getElementById('confirmacion_ingresoMonto').style.display ='block';
+    document.getElementById('retirarMonto').style.display ='none';
+    document.getElementById('confirmacion_retirarMonto').style.display ='none';
 }
 function Cancelar() {
     console.log(acceso)
