@@ -62,9 +62,43 @@ function validarcuenta() {
     return alert("Datos incorrectos, volver a ingresar")
 }
 
-function mostrarclase() {
+function consultarSaldo() {
     console.log(acceso)
+    document.getElementById('consultarSaldo').style.display ='block';
+    document.getElementById('ingresarMonto').style.display ='none';
+    document.getElementById('retirarMonto').style.display ='none';
 }
+function ingresarMonto() {
+    console.log(acceso)
+    document.getElementById('consultarSaldo').style.display ='none';
+    document.getElementById('ingresarMonto').style.display ='block';
+    document.getElementById('retirarMonto').style.display ='none';
+}
+function retirarMonto() {
+    console.log(acceso)
+    document.getElementById('consultarSaldo').style.display ='none';
+    document.getElementById('ingresarMonto').style.display ='none';
+    document.getElementById('retirarMonto').style.display ='block';
+}
+function operacion_retirarMonto(){
+    let monto_retirar = document.getElementById('input-number_retirar').value;
+    document.getElementById('confirma_retiro').innerHTML=acceso.retirarSaldo(Number(monto_retirar));
+    document.getElementById('retirarMonto').style.display ='none';
+    document.getElementById('confirmacion_retirarMonto').style.display ='block';
+}
+function operacion_ingresarMonto(){
+    let monto_ingresar = document.getElementById('input-number_ingresar').value;
+    document.getElementById('confirma_ingreso').innerHTML=acceso.ingresarSaldo(Number(monto_ingresar));
+    document.getElementById('ingresarMonto').style.display ='none';
+    document.getElementById('confirmacion_ingresoMonto').style.display ='block';
+}
+function Cancelar() {
+    console.log(acceso)
+    document.getElementById('consultarSaldo').style.display ='none';
+    document.getElementById('ingresarMonto').style.display ='none';
+    document.getElementById('retirarMonto').style.display ='none';
+}
+
 function Salir() {
     window.location.assign("login.html")
 }
