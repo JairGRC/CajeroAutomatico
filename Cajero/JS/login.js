@@ -1,7 +1,7 @@
 var cuentas = [
     { nombre: "Mali", saldo: 200, password: 'helloworld' },
     { nombre: "Gera", saldo: 290, password: 'l33t' },
-    { nombre: "Maui", saldo: 67, password: '123' }
+    { nombre: "Maui", saldo: 67, password: '1' }
 ];
 
 
@@ -39,6 +39,8 @@ class cuentaBancaria {
 // instancia
 const acceso = new cuentaBancaria();
 
+document.querySelector(".contenedor__contenido__usuario").style.display= none;
+
 function validarcuenta() {
     let contra = document.getElementById('password').value;
     let usuario = document.getElementById('user').value;
@@ -49,6 +51,7 @@ function validarcuenta() {
             acceso.password = contra;
             console.log(acceso)
             //window.location.assign("index.html")
+            document.querySelector('.login-container-general').style.display ='none'; 
             document.getElementById('woman').style.display ='none'; 
             document.getElementById('login').style.display ='none'; 
 
