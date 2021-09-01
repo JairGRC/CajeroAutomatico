@@ -1,137 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="./CSS/login.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/login.css" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-</head>
-<body>
-    <section class="side" id='woman'>
-        <img src="./IMG/woman-2.png" alt="">
-    </section>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-container-general">
+      <section class="side" id="woman">
+        <img src="./IMG/woman-2.png" alt="" />
+      </section>
 
-    <section class="main" id='login'>
+      <section class="main" id="login">
         <div class="login-container">
-            <p class="title">Ingresa tus datos</p>
-            <div class="separator"></div>
-            <p class="welcome-message">Por favor, no comparta su clave por la seguridad de su cuenta bancaria.</p>
+          <p class="title">Ingresa tus datos</p>
+          <div class="separator"></div>
+          <p class="welcome-message">
+            Por favor, no comparta su clave por la seguridad de su cuenta
+            bancaria.
+          </p>
 
-            <form class="login-form">
-                <div class="form-control">
-                    <input type="text" name="user" id="user" placeholder="Usuario" required>
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="form-control">
-                    <input type="password" name="password" id="password" placeholder="Clave" required>
-                    <i class="fas fa-lock"></i>
-                </div>
-                <!-- <input type="button" value="Login" id="submit" onclick="validate()"/> -->
-                <button type="button" class="submit" id="submit" value="Ingresar" onclick="validarcuenta()">Ingreso</button>
-                <!-- <div class="submit">
-                    <input type="button" value="Ingresar" id="submit" onclick="validate()"/>
-                </div> -->
-            </form>
+          <form class="login-form">
+            <div class="form-control">
+              <input
+                type="text"
+                name="user"
+                id="user"
+                placeholder="Usuario"
+                required
+              />
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="form-control">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Clave"
+                required
+              />
+              <i class="fas fa-lock"></i>
+            </div>
+            <!-- <input type="button" value="Login" id="submit" onclick="validate()"/> -->
+            <button
+              type="button"
+              class="submit"
+              id="submit"
+              value="Ingresar"
+              onclick="validarcuenta()"
+            >
+              Ingreso
+            </button>
+            <!-- <div class="submit">
+                      <input type="button" value="Ingresar" id="submit" onclick="validate()"/>
+                  </div> -->
+          </form>
         </div>
-    </section>
+      </section>
+    </div>
 
-    <div id='bienvenida' style="display: none;">
-        <div class="window__green">
-            <div class="main__container">
-              <div class="main__container--title">
-                <h1 id="title">Bienvenido/a, <br><span id='nombreUsuario'></span></h1>
-              </div>
-              <div class="main__container--option-text">
-                <p>Por favor, seleccione qué operación desea realizar</p>
-              </div>
-              <div class="main__container--options-buttons">
-                <div class="options__buttons-balance buttons">
-                  <button type="button" class="button" onclick="consultarSaldo()">Consultar Saldo</button>
-                </div>
-                <div class="options__buttons-deposito buttons">
-                  <button type="button" class="button" onclick="ingresarMonto()">Ingresar Monto</button>
-                </div>
-                <div class="options__buttons-retiro buttons">
-                  <button type="button" class="button" onclick="retirarMonto()">Retirar Monto</button>
-                </div>
-              </div>
-              <button type="button" class="button" onclick="Salir()">Salir</button>
+    <div class="contenedor__contenido__usuario">
+          <!-- BIENVENIDA -->
+
+    <div id="bienvenida" style="display: none">
+      <div class="window__green">
+        <div class="main__container">
+          <div class="main__container--title">
+            <h1 id="title">
+              Bienvenido/a, <br /><span id="nombreUsuario"></span>
+            </h1>
+          </div>
+          <div class="main__container--option-text">
+            <p>Por favor, seleccione qué operación desea realizar</p>
+          </div>
+          <div class="main__container--options-buttons">
+            <div class="options__buttons-deposito buttons">
+              <button type="button" class="button" onclick="ingresarMonto()">
+                Ingresar Monto
+              </button>
+            </div>
+            <div class="options__buttons-retiro buttons">
+              <button type="button" class="button" onclick="retirarMonto()">
+                Retirar Monto
+              </button>
             </div>
           </div>
+          <button type="button" class="button" onclick="Salir()">Salir</button>
+        </div>
+      </div>
     </div>
-    <div id="consultarSaldo" style="display: none;">
-        CONSULTAR SALDO
-    </div>
-    <div id="ingresarMonto" style="display: none;">
-        <div class="window__green">
-            <div class="main__container">
-              <div class="main__container--title">
-                <h1 id="title">Por favor, ingresa un<br>monto a ingresar</h1>
-              </div>
-              <div class="main__container--input--money">
-                <input type="number" name="" id="input-number_ingresar" min="10" max="2000" placeholder="S/0.00">
-              </div>
-              <div class="main__container--options-buttons">
-                <div class="options__buttons-retiro buttons">
-                  <button type="button" class="button" onclick="operacion_ingresarMonto()">Aceptar</button>
-                </div>
-                <div class="options__buttons-retiro buttons">
-                    <button type="button" class="button" onclick="Cancelar()">Cancelar</button>
-                  </div>
-              </div>
+
+    <!-- CONSULTAR SALDO -->
+
+    <div id="consultarSaldo" style="display: none">
+      <div class="window__white">
+        <div class="main__container">
+          <div class="main__container--title">
+            <h1 id="title">Nombre,<br />tu saldo es de:</h1>
+          </div>
+          <div class="main__container--money">
+            <p>Monto</p>
+          </div>
+          <div class="main__container--options-check">
+            <div class="options__buttons-imprimir check">
+              <input type="checkbox" name="" id="checkbox-aceptar" />
+              <label for="checkbox-aceptar">Aceptar</label>
+            </div>
+            <div class="options__buttons-cancelar check">
+              <input type="checkbox" name="" id="checkbox-cancelar" />
+              <label for="checkbox-cancelar">Aceptar</label>
             </div>
           </div>
+        </div>
+      </div>
     </div>
-    <div id="confirmacion_ingresoMonto" style="display: none;">
-        <div class="window__green">
-            <div class="main__container">
-              <div class="main__container--title">
-                <h1 id="title">Ingreso</h1>
-              </div>
-              <div class="main__container--input--money">
-                <p id="confirma_ingreso"></p>
-              </div>
+
+    <!-- INGRESAR MONTO -->
+
+    <div id="ingresarMonto" style="display: none">
+      <div class="window__white">
+        <div class="main__container">
+          <div class="main__container--title">
+            <h1 id="title">Por favor, ingresa un<br />monto a ingresar</h1>
+          </div>
+          <div class="main__container--input--money">
+            <input
+              type="number"
+              name=""
+              id="input-number_ingresar"
+              min="10"
+              max="2000"
+              placeholder="S/0.00"
+            />
+          </div>
+          <div class="main__container--options-buttons-row">
+            <div class="options__buttons-retiro buttons aceptar">
+              <button
+                type="button"
+                class="button"
+                onclick="operacion_ingresarMonto()"
+              >
+                Aceptar
+              </button>
+            </div>
+            <div class="options__buttons-retiro buttons cancelar">
+              <button type="button" class="button" onclick="Cancelar()">
+                Cancelar
+              </button>
             </div>
           </div>
+        </div>
+      </div>
     </div>
-    <div id="retirarMonto" style="display: none;">
-        <div class="window__green">
-            <div class="main__container">
-              <div class="main__container--title">
-                <h1 id="title">Por favor, ingresa un<br>monto a retirar</h1>
-              </div>
-              <div class="main__container--input--money">
-                <input type="number" name="" id="input-number_retirar" min="10" max="2000" placeholder="S/0.00">
-              </div>
-              <div class="main__container--options-buttons">
-                <div class="options__buttons-retiro buttons">
-                  <button type="button" class="button" onclick="operacion_retirarMonto()">Aceptar</button>
-                </div>
-                <div class="options__buttons-retiro buttons">
-                    <button type="button" class="button" onclick="Cancelar()">Cancelar</button>
-                  </div>
-              </div>
+
+    <!-- CONFIRMACION INGRESAR MONTO -->
+
+    <div id="confirmacion_ingresoMonto" style="display: none">
+      <div class="window__white">
+        <div class="main__container">
+          <div class="main__container--title">
+            <h1 id="title">Ingreso</h1>
+          </div>
+          <div class="main__container--input--money">
+            <p id="confirma_ingreso"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RETIRAR MONTO -->
+
+    <div id="retirarMonto" style="display: none">
+      <div class="window__white">
+        <div class="main__container">
+          <div class="main__container--title">
+            <h1 id="title">Por favor, ingresa un<br />monto a retirar</h1>
+          </div>
+          <div class="main__container--input--money">
+            <input
+              type="number"
+              name=""
+              id="input-number_retirar"
+              min="10"
+              max="2000"
+              placeholder="S/0.00"
+            />
+          </div>
+          <div class="main__container--options-buttons">
+            <div class="options__buttons-retiro buttons aceptar">
+              <button
+                type="button"
+                class="button"
+                onclick="operacion_retirarMonto()"
+              >
+                Aceptar
+              </button>
+            </div>
+            <div class="options__buttons-retiro buttons cancelar">
+              <button type="button" class="button" onclick="Cancelar()">
+                Cancelar
+              </button>
             </div>
           </div>
+        </div>
+      </div>
     </div>
-    <div id="confirmacion_retirarMonto" style="display: none;">
-        <div class="window__green">
-            <div class="main__container">
-              <div class="main__container--title">
-                <h1 id="title">Retiro</h1>
-              </div>
-              <div class="main__container--input--money">
-                <p id="confirma_retiro"></p>
-              </div>
-            </div>
+
+    <!-- CONFIRMACION RETIRAR MONTO -->
+
+    <div id="confirmacion_retirarMonto" style="display: none">
+      <div class="window__green">
+        <div class="main__container">
+          <div class="main__container--title">
+            <h1 id="title">Retiro</h1>
           </div>
+          <div class="main__container--input--money">
+            <p id="confirma_retiro"></p>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
 
     <script src="./JS/login.js"></script>
-
-</body>
+  </body>
 </html>
