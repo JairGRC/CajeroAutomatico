@@ -50,20 +50,86 @@
               </div>
               <div class="main__container--options-buttons">
                 <div class="options__buttons-balance buttons">
-                  <button type="button" class="button" onclick="mostrarclase()">Consultar Saldo</button>
+                  <button type="button" class="button" onclick="consultarSaldo()">Consultar Saldo</button>
                 </div>
                 <div class="options__buttons-deposito buttons">
-                  <button type="button" class="button">Ingresar Monto</button>
+                  <button type="button" class="button" onclick="ingresarMonto()">Ingresar Monto</button>
                 </div>
                 <div class="options__buttons-retiro buttons">
-                  <button type="button" class="button">Retirar Monto</button>
+                  <button type="button" class="button" onclick="retirarMonto()">Retirar Monto</button>
                 </div>
               </div>
               <button type="button" class="button" onclick="Salir()">Salir</button>
             </div>
           </div>
     </div>
-
+    <div id="consultarSaldo" style="display: none;">
+        CONSULTAR SALDO
+    </div>
+    <div id="ingresarMonto" style="display: none;">
+        <div class="window__green">
+            <div class="main__container">
+              <div class="main__container--title">
+                <h1 id="title">Por favor, ingresa un<br>monto a ingresar</h1>
+              </div>
+              <div class="main__container--input--money">
+                <input type="number" name="" id="input-number_ingresar" min="10" max="2000" placeholder="S/0.00">
+              </div>
+              <div class="main__container--options-buttons">
+                <div class="options__buttons-retiro buttons">
+                  <button type="button" class="button" onclick="operacion_ingresarMonto()">Aceptar</button>
+                </div>
+                <div class="options__buttons-retiro buttons">
+                    <button type="button" class="button" onclick="Cancelar()">Cancelar</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div id="confirmacion_ingresoMonto" style="display: none;">
+        <div class="window__green">
+            <div class="main__container">
+              <div class="main__container--title">
+                <h1 id="title">Ingreso</h1>
+              </div>
+              <div class="main__container--input--money">
+                <p id="confirma_ingreso"></p>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div id="retirarMonto" style="display: none;">
+        <div class="window__green">
+            <div class="main__container">
+              <div class="main__container--title">
+                <h1 id="title">Por favor, ingresa un<br>monto a retirar</h1>
+              </div>
+              <div class="main__container--input--money">
+                <input type="number" name="" id="input-number_retirar" min="10" max="2000" placeholder="S/0.00">
+              </div>
+              <div class="main__container--options-buttons">
+                <div class="options__buttons-retiro buttons">
+                  <button type="button" class="button" onclick="operacion_retirarMonto()">Aceptar</button>
+                </div>
+                <div class="options__buttons-retiro buttons">
+                    <button type="button" class="button" onclick="Cancelar()">Cancelar</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div id="confirmacion_retirarMonto" style="display: none;">
+        <div class="window__green">
+            <div class="main__container">
+              <div class="main__container--title">
+                <h1 id="title">Retiro</h1>
+              </div>
+              <div class="main__container--input--money">
+                <p id="confirma_retiro"></p>
+              </div>
+            </div>
+          </div>
+    </div>
 
     <script src="./JS/login.js"></script>
 
