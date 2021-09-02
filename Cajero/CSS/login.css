@@ -192,7 +192,12 @@
       outline: none;
       border: none;
       cursor: pointer;
-      /* margin-top: -4%; */
+      margin-top: -1%;
+  }
+
+  .buttonIngresar:hover{
+    background-image: linear-gradient(to right, #333366, #0367a6);
+    color: #fff;
   }
   
   .buttonRetirar {
@@ -204,7 +209,13 @@
       outline: none;
       border: none;
       cursor: pointer;
-      margin-top: -5%;
+      margin: 2.3%;
+      margin-top: -25%;
+  }
+
+  .buttonRetirar:hover{
+    background-image: linear-gradient(to right, #333366, #0367a6);
+    color: #fff;
   }
   
   .buttonSalir {
@@ -216,7 +227,11 @@
       outline: none;
       border: none;
       cursor: pointer;
-      margin-top: 1%;
+      margin-top: -2%;
+  }
+  .buttonSalir:hover{
+    background-image: linear-gradient(to right, #ee2a08, #b91f03);
+    color: #fff;
   }
   /* LADO DERECHO */
   
@@ -244,20 +259,21 @@
       height: 50px;
       width: 200px;
       border-radius: 50px;
-      background-color: #c4c4c4;
-      color: black;
+      background-image: linear-gradient(to right, #1cfa3a, #00a917);
+      color: #fff;
       outline: none;
       border: none;
       cursor: pointer;
       margin-top: 4%;
   }
+
   
   .buttonCancelar {
       height: 50px;
       width: 200px;
       border-radius: 50px;
-      background-color: #c4c4c4;
-      color: black;
+      background-image: linear-gradient(to right, #ee2a08, #b91f03);
+      color: #fff;
       outline: none;
       border: none;
       cursor: pointer;
