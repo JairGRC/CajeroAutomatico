@@ -138,9 +138,10 @@ function Salir() {
         }
     }
     
-    document.querySelector('.login-container-general').style.display = 'block';
+    document.querySelector('.login-container-general').style.display = 'grid';
+   
    // document.getElementById('woman').style.display = 'block';
-    document.getElementById('login').style.display = 'block';
+    document.getElementById('login').style.display = 'grid';
   
     document.getElementById('bienvenida').style.display = 'none';
     document.getElementById('consultarSaldo').style.display = 'none';
