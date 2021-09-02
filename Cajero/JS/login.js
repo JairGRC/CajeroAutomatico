@@ -14,7 +14,7 @@ class cuentaBancaria {
     }
     // métodos
     getSaldo() {
-        return this.saldo
+        return ' $ ' + this.saldo
     }
     ingresarSaldo(monto) {
         let validar = this.saldo + monto;
@@ -58,12 +58,16 @@ function validarcuenta() {
             document.getElementById('bienvenida').style.display ='block';
 
             document.getElementById('nombreUsuario').innerHTML=acceso.nombre;
+            document.getElementById('saldo_usuario').innerHTML=acceso.getSaldo();
+
             return true;
             return alert("Ingreso")
         }
     }
     return alert("Datos incorrectos, volver a ingresar")
 }
+
+
 
 function consultarSaldo() {
     console.log(acceso)
@@ -76,12 +80,16 @@ function ingresarMonto() {
     document.getElementById('consultarSaldo').style.display ='none';
     document.getElementById('ingresarMonto').style.display ='block';
     document.getElementById('retirarMonto').style.display ='none';
+    document.getElementById('confirmacion_ingresoMonto').style.display ='none';
+    document.getElementById('confirmacion_retirarMonto').style.display ='none';
 }
 function retirarMonto() {
     console.log(acceso)
     document.getElementById('consultarSaldo').style.display ='none';
     document.getElementById('ingresarMonto').style.display ='none';
     document.getElementById('retirarMonto').style.display ='block';
+    document.getElementById('confirmacion_ingresoMonto').style.display ='none';
+    document.getElementById('confirmacion_retirarMonto').style.display ='none';
 }
 function operacion_retirarMonto(){
     let monto_retirar = document.getElementById('input-number_retirar').value;
@@ -101,9 +109,10 @@ function operacion_ingresarMonto(){
 }
 function Cancelar() {
     console.log(acceso)
-    document.getElementById('consultarSaldo').style.display ='none';
+    document.getElementById('consultarSaldo').style.display ='block';
     document.getElementById('ingresarMonto').style.display ='none';
     document.getElementById('retirarMonto').style.display ='none';
+    document.getElementById('saldo_usuario').innerHTML=acceso.getSaldo();
 }
 
 function Salir() {

@@ -104,24 +104,15 @@
 
     <!-- CONSULTAR SALDO -->
 
-    <div id="consultarSaldo" style="display: none">
+    <div id="consultarSaldo" style="display: block">
       <div class="window__white">
         <div class="main__container">
+          <br>
           <div class="main__container--title">
-            <h1 id="title">Nombre,<br />tu saldo es de:</h1>
+            <h1 id="title">Tu saldo actual es de:</h1>
           </div>
           <div class="main__container--money">
-            <p>Monto</p>
-          </div>
-          <div class="main__container--options-check">
-            <div class="options__buttons-imprimir check">
-              <input type="checkbox" name="" id="checkbox-aceptar" />
-              <label for="checkbox-aceptar">Aceptar</label>
-            </div>
-            <div class="options__buttons-cancelar check">
-              <input type="checkbox" name="" id="checkbox-cancelar" />
-              <label for="checkbox-cancelar">Aceptar</label>
-            </div>
+            <p class="label_derecho" id="saldo_usuario"></p>
           </div>
         </div>
       </div>
@@ -171,11 +162,12 @@
     <div id="confirmacion_ingresoMonto" style="display: none">
       <div class="window__white">
         <div class="main__container">
+          <br>
           <div class="main__container--title">
             <h1 id="title">Ingreso</h1>
           </div>
           <div class="main__container--input--money">
-            <p id="confirma_ingreso"></p>
+            <p class="label_derecho" id="confirma_ingreso"></p>
           </div>
         </div>
       </div>
@@ -223,13 +215,14 @@
     <!-- CONFIRMACION RETIRAR MONTO -->
 
     <div id="confirmacion_retirarMonto" style="display: none">
-      <div class="window__green">
+      <div class="window__white">
         <div class="main__container">
+          <br>
           <div class="main__container--title">
             <h1 id="title">Retiro</h1>
           </div>
           <div class="main__container--input--money">
-            <p id="confirma_retiro"></p>
+            <p class="label_derecho" id="confirma_retiro"></p>
           </div>
         </div>
       </div>
