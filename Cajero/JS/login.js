@@ -20,9 +20,10 @@ class cuentaBancaria {
         let validar = this.saldo + monto;
         if (validar < 990) {
             this.saldo += monto;
-            return 'Monto ingresado $ ' + monto + '\nNuevo saldo $ ' + this.saldo;
+            return '<p style="font-size: 60px; color: #0033a1;"> Monto ingresado <br> $ ' + monto + '<br> Nuevo saldo <br> $ ' + this.saldo + '</p>';
+            //return 'Monto ingresado $ ' + monto + '\nNuevo saldo $ ' + this.saldo;
         } else {
-            return 'Monto excedido, transacción cancelada';
+            return '<p style="font-size: 60px; color: #e4954c;">Monto excedido, transacción cancelada</p>';
         }
 
     }
@@ -31,9 +32,10 @@ class cuentaBancaria {
         let validar = this.saldo - monto;
         if (validar > 10) {
             this.saldo -= monto;
-            return 'Monto retirado $ ' + monto + '\nNuevo saldo $ ' + this.saldo;
+            return '<p style="font-size: 60px; color: #0033a1;"> Monto retirado <br> $ ' + monto + '<br> Nuevo saldo <br> $ ' + this.saldo + '</p>';
+            //return 'Monto retirado $ ' + monto + '\nNuevo saldo $ ' + this.saldo;
         } else {
-            return 'Monto insuficiente, transacción cancelada';
+            return '<p style="font-size: 60px; color: #e4954c;">Monto insuficiente, transacción cancelada</p>';
         }
 
     }
