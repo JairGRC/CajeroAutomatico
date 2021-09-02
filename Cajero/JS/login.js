@@ -18,7 +18,7 @@ class cuentaBancaria {
     }
     ingresarSaldo(monto) {
         let validar = this.saldo + monto;
-        if (validar < 990) {
+        if (validar <= 990) {
             this.saldo += monto;
             return '<p style="font-size: 60px; color: #0033a1;"> Monto ingresado <br> $ ' + monto + '<br> Nuevo saldo <br> $ ' + this.saldo + '</p>';
             //return 'Monto ingresado $ ' + monto + '\nNuevo saldo $ ' + this.saldo;
@@ -30,7 +30,7 @@ class cuentaBancaria {
     retirarSaldo(monto) {
 
         let validar = this.saldo - monto;
-        if (validar > 10) {
+        if (validar >= 10) {
             this.saldo -= monto;
             return '<p style="font-size: 60px; color: #0033a1;"> Monto retirado <br> $ ' + monto + '<br> Nuevo saldo <br> $ ' + this.saldo + '</p>';
             //return 'Monto retirado $ ' + monto + '\nNuevo saldo $ ' + this.saldo;
